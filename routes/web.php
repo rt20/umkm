@@ -14,14 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 // Homepgae
 Route::get('/', function () {
-    return redirect()->route('admin-dashboard');
+    return redirect()->route('dashboard');
 });
 
 // Dashboard
 Route::prefix('dashboard')
         ->middleware(['auth:sanctum','admin'])
         ->group(function(){
-            Route::get('/',[DashboardController::class,'index'])->name('admin-dashboard');
+            Route::get('/',[DashboardController::class,'index'])->name('dashboard');
 
         });
 
