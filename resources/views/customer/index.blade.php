@@ -1,6 +1,6 @@
 @extends('startboot.app')
 
-@section('title','Dashboard')
+@section('title','Customer')
 
 @section('content')
 <div class="container-fluid">

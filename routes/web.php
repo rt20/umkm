@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,4 @@ Route::prefix('dashboard')
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('home.index');
 })->name('dashboard');
+Route::resource('customer', CustomerController::class);
